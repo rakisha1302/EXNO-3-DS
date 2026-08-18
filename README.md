@@ -174,7 +174,9 @@ df.skew()
 df["Highly Negative Skew_yeojohnson"],parameters=stats.yeojohnson(df["Highly Negative Skew"]) 
 df.skew()
 ```
+
 <img width="562" height="161" alt="image" src="https://github.com/user-attachments/assets/37a5be04-0349-4248-b0f3-5fa71c5734b0" />
+
 ```
 # QUANTILE TRANSFORMATION 
 from sklearn.preprocessing import QuantileTransformer 
@@ -182,7 +184,9 @@ qt=QuantileTransformer(output_distribution='normal')
 df["Moderate Negative Skew_1"]=qt.fit_transform(df[["Moderate Negative Skew"]]) 
 df
 ```
+
 <img width="1403" height="483" alt="image" src="https://github.com/user-attachments/assets/5dc8db2d-9ef9-44b4-bbf9-aa4b97500e35" />
+
 
 ```
 import seaborn as sns 
@@ -193,6 +197,7 @@ sm.qqplot(df["Moderate Negative Skew"],line='45')
 # QQ - QUANTILE QUANTILE PLOT 
 plt.show()
 ```
+
 <img width="833" height="548" alt="image" src="https://github.com/user-attachments/assets/2a56b4f4-ba6e-4e9c-8448-3b915d5d0960" />
 
 ```
@@ -201,6 +206,8 @@ plt.show()
 ```
 
 <img width="798" height="561" alt="image" src="https://github.com/user-attachments/assets/ca381e1d-c34c-402a-aca3-17354bb61f4c" />
+
+
 ```
 from sklearn.preprocessing import QuantileTransformer 
 qt=QuantileTransformer(output_distribution='normal',n_quantiles=891) 
@@ -208,6 +215,8 @@ df["Moderate Negative Skew"]=qt.fit_transform(df[["Moderate Negative Skew"]])
 sm.qqplot(df["Moderate Negative Skew"],line='45') 
 plt.show()
 ```
+
+
 <img width="823" height="573" alt="image" src="https://github.com/user-attachments/assets/8e237da2-b674-45e3-8645-3848cd5499dc" />
 
 
